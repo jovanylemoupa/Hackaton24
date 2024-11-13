@@ -1,0 +1,90 @@
+<div class="header">
+  <!-- Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid justify-content-between">
+      <!-- Left elements -->
+      <div class="d-flex">
+        <!-- Brand -->
+        <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
+          <img
+            src="/assets/img/logo.png"
+            height="60"
+            alt="logo"
+            loading="lazy"
+            style="margin-top: 2px"
+          />
+        </a>
+        <!-- partie nom de l'application -->
+        <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
+          Easy<span style="color: blue; font-weight: bold">Move</span>
+        </a>
+
+        <!-- Search form -->
+        <form class="input-group w-auto my-auto d-none d-sm-flex">
+          <!-- boutton pour faire l'annonce -->
+          <button
+            type="button"
+            class="btn btn-primary btn-lg mx-3 rounded-pill"
+          >
+            <i class="fas fa-bullhorn" style="margin-right: 7px"></i>
+            Déposer une annonce
+          </button>
+
+          <input
+            autocomplete="off"
+            type="search"
+            class="form-control rounded"
+            placeholder="Recherche sur le logement"
+            style="min-width: 125px"
+          />
+
+          <span class="input-group-text border-0 d-none d-lg-flex"
+            ><i class="fas fa-search"></i
+          ></span>
+        </form>
+      </div>
+
+      <!-- Right elements -->
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item me-3 me-lg-1">
+          <a
+            rel="canonical"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLink="/"
+            class="btn btn-outline-primary rounded-pill px-4"
+          >
+            Accueil
+          </a>
+        </li>
+
+        <li class="nav-item me-3 me-lg-1">
+          <a
+            rel="canonical"
+            routerLinkActive="active-link"
+            routerLink="/"
+            class="btn btn-outline-primary rounded-pill px-4"
+          >
+            Connexion / Inscription
+          </a>
+        </li>
+
+        <!-- si l'utilisateur est connecte on peut afficher le profil -->
+        <!-- <li class="nav-item me-3 me-lg-1">
+          <a class="nav-link d-sm-flex align-items-sm-center" href="#">
+            <img
+              src="https://mdbootstrap.com/img/new/avatars/1.webp"
+              class="rounded-circle"
+              height="22"
+              alt=""
+              loading="lazy"
+            />
+            <strong class="d-none d-sm-block ms-1">John</strong>
+          </a>
+        </li> -->
+      </ul>
+      <!-- Right elements -->
+    </div>
+  </nav>
+  <!-- Navbar -->
+</div>
