@@ -1,0 +1,112 @@
+/* Styles pour la Navbar */
+.container-fluid {
+    width: 100%; /* S'assure que la navbar prend toute la largeur */
+    padding: 0; /* Supprimer les espaces autour de la navbar */
+}
+
+
+.navbar {
+    width: 100%; /* S'assure que la navbar prend toute la largeur */
+    padding: 15px 0; /* Ajustement du padding de la navbar */
+    background: 
+    linear-gradient(to right, rgba(168, 230, 207, 0.6), rgba(220, 237, 193, 0.6)), /* Dégradé assombri */
+    url('../../../../assets/img/back.jpg') center top/cover no-repeat; /* Image de fond prise depuis le haut */
+    border-bottom-left-radius: 30px; /* Arrondi en bas à gauche */
+    border-bottom-right-radius: 30px; /* Arrondi en bas à droite */
+    box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+    backdrop-filter: blur(10px); /* Effet de flou sur l'arrière-plan */
+    z-index: 9999; /* Mettre la navbar au-dessus de tout */
+    left: 0;
+}
+    
+/* Remove the shadow that might be causing the gray color */
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Couche sombre pour assombrir l'image de fond */
+    border-bottom-left-radius: 30px; /* Arrondi en bas à gauche */
+    border-bottom-right-radius: 30px; /* Arrondi en bas à droite */
+    z-index: -1; /* Garder en arrière-plan */
+}
+
+ 
+
+.navbar-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Ramène la navbar au centre horizontalement */
+    display: flex; /* Utiliser flexbox pour centrer les éléments */
+    justify-content: center; /* Centre les éléments de la navbar */
+    flex-grow: 1; /* Permet à la navbar de s'étendre sur toute la largeur disponible */
+    gap: 20px; /* Espace entre les éléments */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.8rem; /* Augmenter la taille de la police */
+    font-weight: 600; /* Augmenter le poids de la police */
+    color: #ffffff; /* Couleur du texte des liens */
+    transition: color 0.3s, background-color 0.3s, padding 0.3s; /* Transition pour le changement de couleur et de padding */
+    padding: 0px 20px; /* Augmenter l'espacement interne pour améliorer la visibilité */
+    border-radius: 5px; /* Légèrement arrondi les liens */
+    margin-top: -10px; /* Ajustement du haut pour remonter les liens */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e0e0e0; /* Couleur lors du survol */
+    background-color: rgba(0, 0, 0, 0.2); /* Fond légèrement plus sombre au survol */
+    padding: 12px 22px; /* Augmentation subtile du padding au survol */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre au survol pour donner un effet de levée */
+}
+
+.navbar-toggler {
+    border: none; /* Enlève la bordure du bouton de la navbar */
+    color: white; /* Couleur de l'icône pour être visible sur le fond */
+}
+
+/* Styles pour les icônes */
+.fa-user {
+    color: #ffffff; /* Couleur de l'icône utilisateur */
+}
+
+.position-relative {
+    color: #ffffff; /* Assure que le texte lié au panier est aussi blanc */
+}
+
+/* Ombre sous la navbar pour un effet flottant */
+.navbar {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adjust shadow to be lighter */
+}
+
+/* Adjust the d-flex class for alignment */
+.d-flex {
+    display: flex; /* Ensure flexbox is enabled */
+    flex-direction: row; /* Aligne les éléments sur une ligne */
+    align-items: center; /* Aligne les éléments au centre verticalement */
+    position: absolute; /* Position the div absolutely within the navbar */
+    right: 20px; /* Adjust the right offset as needed */
+    top: 25px; /* Adjust the top offset as needed */ 
+}
+/* Ajout de styles pour ajuster le positionnement des éléments */
+.align-items-end {
+    align-items: flex-end; /* Aligne les éléments en bas de la ligne */
+}
+
+.nav-item.nav-link {
+    margin-top: -30px; /* Déplace les éléments vers le haut de 30px */
+}
+
+/* Styles pour rapprocher le Logout et le Status Panier */
+.nav-item.nav-link:last-child {
+    margin-left: 10px; /* Rapproche le Logout et le Statut Panier */
+}
+.logout-link {
+    margin-left: -10px; /* Déplace le bouton Logout légèrement à gauche */
+}
+.app-status-panier {
+    margin-left: 10px; /* Espace entre le Logout et le Status Panier */
+ }
+ 

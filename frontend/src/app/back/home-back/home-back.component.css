@@ -1,0 +1,43 @@
+body {
+  margin: 0; /* Supprime la marge par défaut du body */
+}
+
+.container {
+  display: flex; /* Utilise flexbox pour aligner les éléments */
+  min-height: calc(100vh - 100px); /* Ajuste la hauteur pour tenir compte du footer */
+  position: relative; /* Assure que les éléments enfants sont bien positionnés */
+}
+
+app-sidebar {
+  background-color: white; /* Assurez-vous que la couleur de fond est définie */
+  width: 200px; /* Largeur fixe pour la sidebar */
+  height: calc(100vh - 100px); /* Ajuste la hauteur pour tenir compte du header et du footer */
+  position: fixed; /* Position fixe pour garder la sidebar en place */
+  top: 100px; /* Décalage pour se placer sous le header */
+  left: 0;
+  z-index: 10; /* Assurez-vous que la sidebar a un z-index élevé */
+}
+
+.content {
+  flex-grow: 1; /* Prend tout l'espace restant */
+  padding: 20px; /* Un peu de padding autour du contenu */
+  margin-left: 220px; /* Ajustez la marge à gauche pour le contenu, tenant compte de la largeur de la sidebar */
+  position: relative; /* Permet d'utiliser z-index */
+  z-index: 1; /* Assurez-vous que le contenu est derrière la barre latérale */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; /* Ajoutez une marge supérieure pour éviter que le contenu ne touche le bord de la sidebar */
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}

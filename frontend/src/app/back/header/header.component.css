@@ -1,0 +1,12 @@
+header {
+  background-color: #333; /* Couleur de fond du header */
+  color: white; /* Couleur du texte */
+  padding: 10px; /* Padding pour le header */
+  text-align: center; /* Centre le texte */
+  height: 100px; /* Hauteur fixe pour le header */
+  position: fixed; /* Fixer le header */
+  top: 0; /* Positionner en haut */
+  left: 0; /* Positionner à gauche */
+  right: 0; /* Positionner à droite */
+  z-index: 1000; /* Assurer qu'il soit au-dessus des autres éléments */
+}

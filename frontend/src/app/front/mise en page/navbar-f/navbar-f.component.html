@@ -1,0 +1,28 @@
+<!-- Début de la barre de navigation -->
+<div class="container-fluid">
+    <div class="">
+        <nav class="navbar navbar-expand-xl navbar-light bg-white shadow-sm">
+            <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Basculer la navigation">
+                <span class="fa fa-bars text-primary"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="index.html" class="nav-item nav-link active">Accueil</a>
+                    <a routerLink="/shop" class="nav-item nav-link">Boutique</a>
+                 </div>
+
+                <!-- Éléments en haut à droite -->
+                <div class="d-flex m-3 me-0" *ngIf="!isClienLogIn">
+                    <a routerLink="/login" class="nav-item nav-link"><i class="fas fa-user fa-2x"></i></a>
+                </div>
+                <div class="d-flex m-3 me-0 align-items-end" *ngIf="isClienLogIn" style="margin-top: -30px;">
+                    <a routerLink="/profil" class="nav-item nav-link"><i class="fas fa-user fa-2x"></i></a>
+                    <a routerLink="#" (click)="logOut()" class="nav-item nav-link logout-link">Logout</a>
+                    <app-status-panier></app-status-panier>
+                </div>
+                
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Fin de la barre de navigation -->

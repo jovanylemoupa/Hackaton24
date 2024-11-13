@@ -1,0 +1,39 @@
+h2 {
+  color: #808080; /* Gris */
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center; /* Centre le titre */
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Styles pour le bouton supprimer */
+button {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.supprimer {
+  background-color: red; /* Couleur de fond rouge */
+  color: white; /* Texte en blanc */
+}
+
+button.supprimer:hover {
+  background-color: darkred; /* Couleur lors du survol */
+}

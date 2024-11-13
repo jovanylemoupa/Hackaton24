@@ -1,0 +1,176 @@
+        <!-- Checkout Page Start -->
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <h1 class="mb-4">Billing details</h1>
+                <form [formGroup]="validerPanierFormGroup" (ngSubmit)="onSubmit()">
+                    <div class="row g-5">
+                        <div formGroupName="client"  class="col-md-12 col-lg-6 col-xl-7">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-item w-100">
+                                        <label class="form-label my-3">Nom<sup>*</sup></label>
+                                        <input type="text" formControlName="nom" class="form-control">
+                                        <!-- controle saisie nom -->
+                                        <div *ngIf="nom.invalid && (nom.dirty || nom.touched)" class="alert alert-danger mt-1">
+                                            <div *ngIf="nom.errors['required']">
+                                                Nom est obligatoire
+                                            </div>
+                                            <div *ngIf="nom.errors['minlength']">
+                                                il faut minimun 3 caractères
+                                            </div>
+                                        </div>
+                                        <!-- controle saisie nom -->
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-item w-100">
+                                        <label class="form-label my-3"> Prénom <sup>*</sup></label>
+                                        <input type="text" formControlName="prenom" class="form-control">
+                                        <!-- controle de saisie -->
+                                        <div *ngIf="prenom.invalid && (prenom.dirty || prenom.touched)" class="alert alert-danger mt-1">
+                                            <div *ngIf="prenom.errors['required']">
+                                                Prenom est obligatoire
+                                            </div>
+                                            <div *ngIf="prenom.errors['minlength']">
+                                                il faut minimun 3 caractères
+                                            </div>
+                                        </div>
+                                        <!-- controle de saisie -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label my-3"> Addresse <sup>*</sup></label>
+                                <input type="text" formControlName="adresse" class="form-control" placeholder="votre adresse">
+                                <!-- adresse control de saisie -->
+                                <div *ngIf="adresse.invalid && (adresse.dirty || adresse.touched)" class="alert alert-danger mt-1">
+                                    <div *ngIf="adresse.errors['required']">
+                                        l'adresse est obligatoire
+                                    </div>
+                                    <div *ngIf="adresse.errors['minlength']">
+                                        il faut minimun 4 caractères
+                                    </div>
+                                </div>
+                                <!-- adresse control de saisie -->
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label my-3"> Email <sup>*</sup></label>
+                                <input type="email" formControlName="email" class="form-control">
+                                <!-- controle de saisie email -->
+                                 <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger mt-1">
+                                    <div *ngIf="email.errors['required']">
+                                        Prenom est obligatoire
+                                    </div>
+                                    <div *ngIf="email.errors['pattern']">
+                                        respectez le format aaaxyz.bbb
+                                    </div> 
+                                </div>
+                                <!-- controle de saisie email -->
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-12 col-lg-6 col-xl-5">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                         <!-------- info carte de crédit -->
+                    <!---------Stripe element sexion carte de credit -->
+
+                    <div formGroupName="carteDeCredit" class="form-area">
+                        <h3>Carte de Credit</h3>
+                        <div id="card-element">
+                            <!----- a Stripe element sront insérer ici ---->
+
+                        </div>
+                      
+                        <!-------- affichage derreur ici-------->
+                        <div id="card-errors" class="displayError.textContent!=='': 'alert alert-danger mt-l' ">
+
+                        </div>
+                    </div>
+
+                        <!--------------- Detail Commande --->
+                                        <tr>
+                                            <th scope="row">
+                                            </th>
+                                            <td class="py-5"></td>
+                                            <td class="py-5"></td>
+                                            <td class="py-5">
+                                                <p class="mb-0 text-dark py-3">PRIX Total</p>
+                                            </td>
+                                            <td class="py-5">
+                                                <div class="py-3 border-bottom border-top">
+                                                    <p class="mb-0 text-dark">{{ prixTotal | currency:'EUR':'symbol':'1.2-2'}}</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- <tr>
+                                            <th scope="row">
+                                            </th>
+                                            <td class="py-5">
+                                                <p class="mb-0 text-dark py-4">Shipping</p>
+                                            </td>
+                                            <td colspan="3" class="py-5">
+                                                <div class="form-check text-start">
+                                                    <input type="checkbox" class="form-check-input bg-primary border-0" id="Shipping-1" name="Shipping-1" value="Shipping">
+                                                    <label class="form-check-label" for="Shipping-1">Free Shipping</label>
+                                                </div>
+                                                <div class="form-check text-start">
+                                                    <input type="checkbox" class="form-check-input bg-primary border-0" id="Shipping-2" name="Shipping-1" value="Shipping">
+                                                    <label class="form-check-label" for="Shipping-2">Flat rate: $15.00</label>
+                                                </div>
+                                                <div class="form-check text-start">
+                                                    <input type="checkbox" class="form-check-input bg-primary border-0" id="Shipping-3" name="Shipping-1" value="Shipping">
+                                                    <label class="form-check-label" for="Shipping-3">Local Pickup: $8.00</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                            </th>
+                                            <td class="py-5">
+                                                <p class="mb-0 text-dark text-uppercase py-3">PRIX TOTAL</p>
+                                            </td>
+                                            <td class="py-5"></td>
+                                            <td class="py-5"></td>
+                                            <td class="py-5">
+                                                <div class="py-3 border-bottom border-top">
+                                                    <p class="mb-0 text-dark">{{ prixTotal | currency:'EUR':'symbol':'1.2-2'}}</p>
+                                                </div>
+                                            </td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- <div class="row g-4 text-center align-items-center justify-content-center border-bottom py-3">
+                                <div class="col-12">
+                                    <div class="form-check text-start my-3">
+                                        <input type="checkbox" class="form-check-input bg-primary border-0" id="Paypal-1" name="Paypal" value="Paypal">
+                                        <label class="form-check-label" for="Paypal-1">Paypal</label>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="row g-4 text-center align-items-center justify-content-center pt-4">
+                                <button type="button" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Place Order</button>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="row g-4 text-center align-items-center justify-content-center pt-4">
+                        <button type="submit" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Place Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Checkout Page End -->
+
+

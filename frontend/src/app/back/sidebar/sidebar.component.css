@@ -1,0 +1,73 @@
+nav {
+  background-color: white; /* Couleur de fond de la sidebar */
+  width: 200px; /* Largeur fixe pour la sidebar */
+  height: calc(100vh - 100px); /* Ajuste la hauteur pour tenir compte du header et du footer */
+  position: fixed; /* Ajoutez cette ligne */
+  top: 100px; /* Décalage pour se placer sous le header */
+  left: 0;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre pour donner du relief */
+}
+nav::after {
+  content: ''; /* Crée un contenu vide */
+  display: block; /* Affiche la ligne */
+  width: 1px; /* Largeur de la ligne */
+  height: 100%; /* Hauteur de la ligne */
+  background-color: #ccc; /* Couleur de la ligne */
+  position: absolute; /* Positionnement absolu */
+  top: 0; /* Commence en haut de la nav */
+  right: 0; /* Positionne à droite */
+}
+.ligne-verticale {
+  width: 1px; /* Largeur de la ligne */
+  height: 100%; /* Hauteur de la ligne */
+  background-color: #ccc; /* Couleur de la ligne */
+  position: absolute; /* Positionnement absolu */
+  top: 0; /* Commence en haut de la nav */
+  right: 0; /* Positionne à droite */
+}
+
+nav ul {
+  list-style-type: none; /* Supprime les puces des listes */
+  padding: 0; /* Supprime le padding par défaut */
+}
+
+nav li {
+  margin: 10px 0; /* Espace entre les éléments de la liste */
+}
+
+nav li:hover {
+  cursor: pointer; /* Change le curseur pour indiquer que l'élément est cliquable */
+}
+
+nav li > a {
+  text-decoration: none; /* Supprime le soulignement des liens */
+  color: #222; /* Couleur plus foncée pour le texte des modules */
+  padding: 15px; /* Augmente le padding pour rendre les liens plus grands */
+  display: block; /* Permet de cliquer sur toute la zone */
+  transition: background-color 0.3s, transform 0.3s; /* Transition pour l'effet au survol */
+  border-radius: 5px; /* Coins arrondis pour un meilleur look */
+  font-size: 1.1em; /* Agrandit la taille de la police pour les modules */
+}
+
+/* Styles pour les sous-éléments CRUD */
+nav .sous-crud {
+  list-style-type: disc; /* Utilise des points pour les sous-éléments */
+  padding-left: 20px; /* Espace à gauche pour le retrait */
+  font-size: 0.9em; /* Réduit la taille de la police */
+  margin-top: 5px; /* Espace au-dessus des sous-modules */
+  margin-bottom: 5px; /* Espace en dessous des sous-modules */
+}
+
+nav .sous-crud li {
+  margin: 0; /* Supprime l'espace entre les sous-éléments */
+}
+
+nav .sous-crud li a {
+  padding: 5px; /* Réduit le padding pour les sous-éléments */
+  color: #555; /* Couleur du texte des sous-éléments */
+}
+
+nav .sous-crud li a:hover {
+  background-color: #e0e0e0; /* Couleur de fond au survol pour les sous-éléments */
+}

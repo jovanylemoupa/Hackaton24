@@ -1,0 +1,23 @@
+<div class="profil-container">
+  <h2>Profil de l'utilisateur</h2>
+
+  <!-- Vérifie si l'utilisateur existe -->
+  <div *ngIf="user; else nouser">
+    <div class="user-details">
+      <p><strong>Email :</strong> {{ user.email }}</p>
+      <!--<p><strong>Nom :</strong>-->
+
+      <!--</p>-->
+      <!--<p><strong>Prénom :</strong> </p>-->
+      <!-- Ajoute d'autres champs si nécessaire -->
+    </div>
+  </div>
+
+  <!-- Si aucun utilisateur n'est trouvé, afficher ce message -->
+  <ng-template #nouser>
+    <p>Aucun utilisateur trouvé.</p>
+  </ng-template>
+
+
+
+

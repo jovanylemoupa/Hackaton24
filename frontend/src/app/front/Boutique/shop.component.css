@@ -1,0 +1,16 @@
+.product-container {
+    display: flex;            /* Utilise Flexbox pour l'alignement horizontal */
+    align-items: flex-start; /* Aligne les composants en haut */
+    margin-top: 100px;       /* Espace au-dessus de la barre de navigation */
+}
+
+app-search-bar {
+    width: 300px;            
+    margin-right: 100px;     
+     top: 0;                  /* Ajustez cette valeur si nécessaire */
+    z-index: 1;              /* Assurez-vous que la barre de recherche est au-dessus */
+}
+
+app-product-f {
+    flex: 1;                 /* Permet à la liste des produits de prendre l'espace restant */
+}

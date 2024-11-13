@@ -1,0 +1,30 @@
+<div class="big-deal-container">
+    <h2 class="section-title">Les meilleures offres de la semaine</h2>
+    <button class="scroll-btn left-btn" (click)="scrollLeft()" [disabled]="currentStartIndex === 0">‹</button>
+
+    <div class="product-list">
+      <div *ngFor="let produit of displayedProducts" class="product-card">
+        <div class="product-img">
+          <img [src]="'assets/img/' + produit.image" alt="{{ produit.nom }}">
+        </div>
+        <div class="product-info">
+          <h5>{{ produit.nom }}</h5>
+          <p>{{ produit.description }}</p>
+          
+          <p *ngIf="produit.remise > 0">
+            <span class="old-price">{{ produit.prix }} €</span>
+            <span class="new-price">{{ produit.prix - (produit.prix * produit.remise / 100) | number:'1.2-2' }} €</span>
+          </p>
+          <p *ngIf="produit.remise === 0">
+            <span class="price">{{ produit.prix }} €</span>
+          </p>
+          
+          <button class="btn-add" (click)="ajouterAuPanier(produit)">
+            Ajouter au panier
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <button class="scroll-btn right-btn" (click)="scrollRight()" [disabled]="currentStartIndex + 4 >= bigDealProducts.length">›</button>
+</div>

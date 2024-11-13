@@ -1,0 +1,6 @@
+<app-navbar-f *ngIf="!isBackOffice() && !isAuthPage()"></app-navbar-f>
+<app-notification *ngIf="!isBackOffice() && !isAuthPage()"></app-notification>
+
+<router-outlet></router-outlet>
+
+<app-footer-f *ngIf="!isBackOffice() && !isAuthPage()"></app-footer-f>

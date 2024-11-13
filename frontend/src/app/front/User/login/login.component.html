@@ -1,0 +1,55 @@
+<!-- Navbar start -->
+
+
+<!-- Modal Search Start -->
+
+
+
+<!-- Contact Start -->
+<div class="container-fluid contact py-5">
+  <div class="container py-5">
+    <div class="p-5 bg-light rounded">
+      <div class="row g-4">
+        <div class="col-12">
+          <div class="text-center mx-auto" style="max-width: 700px;">
+            <h1 class="text-primary">Connexion</h1>
+          </div>
+        </div>
+        <div class="container mt-5">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="username" class="form-label">Email</label>
+                <input type="email" class="form-control" id="username" formControlName="username" placeholder="Entrez votre email" [ngClass]="{ 'is-invalid': submitted && f['username'].errors }">
+                <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
+                  <div *ngIf="f['username'].errors['required']">L'email est obligatoire</div>
+                  <div *ngIf="f['username'].errors['email']">Veuillez entrer une adresse email valide</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="password" class="form-label">Mot de passe</label>
+                <input type="password" class="form-control" id="password" formControlName="password" placeholder="Entrez votre mot de passe" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }">
+                <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                  <div *ngIf="f['password'].errors['required']">Le mot de passe est obligatoire</div>
+                  <div *ngIf="f['password'].errors['minlength']">Le mot de passe doit contenir au moins 6 caractères</div>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="errorMessage" class="alert alert-danger">
+              {{ errorMessage }}
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Se connecter</button>
+            </div>
+            <p align="right">
+              Pas de compte?
+              <a routerLink="/registration">Inscrivez-vous</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact End -->
+

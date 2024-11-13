@@ -1,0 +1,30 @@
+<div class="search-bar">
+    <form [formGroup]="searchForm" (ngSubmit)="onSearch()" class="d-flex flex-column">
+      <input
+        type="text"
+        class="form-control mb-2"
+        placeholder="Nom"
+        formControlName="nom"
+      />
+      <input
+        type="text"
+        class="form-control mb-2"
+        placeholder="Description"
+        formControlName="description"
+      />
+      <input
+        type="number"
+        class="form-control mb-2"
+        placeholder="Prix Min"
+        formControlName="prixMin"
+      />
+      <input
+        type="number"
+        class="form-control mb-2"
+        placeholder="Prix Max"
+        formControlName="prixMax"
+      />
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+  </div>
+  

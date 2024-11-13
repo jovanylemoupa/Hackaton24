@@ -1,0 +1,38 @@
+<h2>Ajouter un Nouveau Produit</h2>
+
+<form (ngSubmit)="onSubmit()" #ajouterForm="ngForm">
+  <div>
+    <label for="nom">Nom:</label>
+    <input type="text" id="nom" [(ngModel)]="produit.nom" name="nom" required />
+  </div>
+
+  <div>
+    <label for="description">Description:</label>
+    <textarea id="description" [(ngModel)]="produit.description" name="description" required></textarea>
+  </div>
+
+  <div>
+    <label for="quantite">Quantité:</label>
+    <input type="number" id="quantite" [(ngModel)]="produit.quantite" name="quantite" required />
+  </div>
+
+  <div>
+    <label for="prix">Prix:</label>
+    <input type="number" id="prix" [(ngModel)]="produit.prix" name="prix" required />
+  </div>
+
+  <div>
+    <label for="image">Image:</label>
+    <input type="text" id="image" [(ngModel)]="produit.image" name="image" />
+  </div>
+
+  <div>
+    <label for="remise">Remise (%):</label>
+    <input type="number" id="remise" [(ngModel)]="produit.remise" name="remise" min="0" max="100" />
+  </div>
+
+  <button type="submit">Ajouter le Produit</button>
+</form>
+
+<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+<div *ngIf="successMessage" class="success">{{ successMessage }}</div>

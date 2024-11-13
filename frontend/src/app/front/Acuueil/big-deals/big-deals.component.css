@@ -1,0 +1,146 @@
+.big-deal-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-list {
+    display: flex;
+    gap: 20px; /* Space between cards */
+    transition: transform 0.5s ease; /* Increase transition duration for smooth scrolling */
+    margin-top: 60px; /* Add space to avoid overlap with the title */
+    padding-top: 40px; /* Ajouter du padding en haut */
+}
+
+
+.product-card {
+    background-color: #f0f8f2; /* Light green background for cards */
+    border: 1px solid #d1e7dd; /* Subtle border */
+    border-radius: 10px;
+     width: 250px; /* Set a consistent width */
+    height: 400px; /* Set a consistent height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.product-img {
+    width: 100%;
+    height: 200px; /* Fix the image container height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6f4ea; /* Light background for the image */
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure image fits without being cropped */
+}
+
+.product-info h5 {
+    font-size: 1.2rem;
+    color: #2e6f3d; /* Dark green for titles */
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    color: #5a8a5a; /* Grayish green for text */
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #000;
+    text-decoration: line-through; /* Old price with strike-through */
+}
+
+.old-price {
+    font-size: 1.3rem; /* Smaller font size for the old price */
+    color: #999;
+    text-decoration: line-through; /* Strikethrough for the old price */
+    margin-bottom: 5px;
+    padding-right: 5px;
+}
+
+.new-price {
+    color: #c0392b; /* Red color for the new discounted price */
+    font-size: 1.5rem; /* Larger font size for the new price */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn-add {
+    background-color: #2e6f3d; /* Dark green for buttons */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add:hover {
+    background-color: #235b30; /* Darker green on hover */
+}
+
+/* Scroll buttons */
+.scroll-btn {
+    background-color: #2e6f3d; /* Dark green for buttons */
+    color: white;
+    border: none;
+    padding: 15px; /* Augmenter le padding pour agrandir le bouton */
+    border-radius: 50%; /* Rendre le bouton complètement rond */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 20px; /* Ajouter une marge de chaque côté */
+    font-size: 1.5rem; /* Augmenter la taille de la police */
+    width: 50px; /* Largeur fixe pour le bouton */
+    height: 50px; /* Hauteur fixe pour le bouton */
+}
+
+.scroll-btn:hover {
+    background-color: #235b30; /* Darker green on hover */
+}
+
+.scroll-btn:disabled {
+    background-color: #999; /* Disabled button color */
+    cursor: not-allowed;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .product-card {
+        width: 100%;
+        height: auto;
+    }
+}
+.section-title {
+    text-align: center; /* Center the title */
+    font-size: 4rem; /* Font size for the title */
+    color: #2e6f3d; /* Dark green color for the title */
+    margin-bottom: 40px; /* Space below the title */
+    font-weight: bold; /* Make the title bold */
+    position: absolute; /* Position it above the product list */
+    top: 0; /* Align to the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust horizontal alignment */
+    margin-bottom: 80px; /* Augmenter la marge inférieure */
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.section-title {
+    font-family: 'Roboto', sans-serif; /* Utiliser une police moderne */
+}

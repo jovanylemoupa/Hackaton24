@@ -1,0 +1,25 @@
+<h2>Liste des Produits</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Description</th>
+      <th>Quantité</th>
+      <th>Prix</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let produit of produits">
+      <td>{{ produit.id }}</td>
+      <td>{{ produit.nom }}</td>
+      <td>{{ produit.description }}</td>
+      <td>{{ produit.quantite }}</td>
+      <td>{{ produit.prix }} €</td>
+      <td>
+         <button class="supprimer" (click)="deleteProduit(produit.id)">Supprimer</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,52 @@
+.search-bar {
+    margin-left: 20%;
+    margin-top: 40px;
+    padding: 20px; 
+    background-color: rgba(255, 255, 255, 0.95); /* Légèrement plus opaque pour un contraste accru */
+    border: 2px solid #2e7d32; /* Bord solide */
+    border-radius: 10px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée pour un effet de profondeur */
+    max-width: 720px; 
+    width: 100%; 
+    transition: box-shadow 0.3s ease; /* Transition douce pour l'ombre */
+}
+
+.search-bar:hover {
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4); /* Ombre plus prononcée au survol */
+}
+
+.form-control {
+    margin-bottom: 18px; 
+    padding: 14px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 1.2rem; /* Taille de police légèrement réduite pour une meilleure lisibilité */
+    transition: border 0.3s; /* Transition pour le changement de bordure */
+}
+
+.form-control:focus {
+    border: 2px solid #2e7d32; /* Changer la couleur de la bordure au focus */
+    outline: none; /* Supprime la bordure par défaut */
+}
+
+.form-control::placeholder {
+    color: #aaa; 
+    font-size: 1.1rem; /* Légèrement plus petit pour un aspect plus subtil */
+}
+
+.btn {
+    width: 100%; 
+    background-color: #2e7d32; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 14px; 
+    font-size: 1.4rem; /* Ajustement de la taille pour plus de confort */
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.2s; /* Transition fluide pour la couleur et le mouvement */
+}
+
+.btn:hover {
+    background-color: #4caf50; 
+    transform: translateY(-2px); /* Légère élévation au survol pour un effet interactif */
+}

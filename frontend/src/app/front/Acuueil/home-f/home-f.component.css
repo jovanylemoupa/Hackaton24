@@ -1,0 +1,9 @@
+app-dynamique-image-search {
+    margin-bottom: 0; /* Supprime l'espace en bas */
+    padding-bottom: 0; /* Si du padding est défini, on le supprime aussi */
+}
+
+app-big-deals {
+    margin-top: 0; /* Supprime l'espace en haut */
+    padding-top: 0; /* Si du padding est défini, on le supprime aussi */
+}

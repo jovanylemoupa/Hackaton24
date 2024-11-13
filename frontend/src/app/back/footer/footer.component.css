@@ -1,0 +1,12 @@
+footer {
+  background-color: #333; /* Couleur de fond du footer */
+  color: white; /* Couleur du texte */
+  text-align: center; /* Centre le texte */
+  padding: 10px; /* Padding pour le footer */
+  height: 100px; /* Hauteur fixe pour le footer */
+  position: fixed; /* Fixer le footer */
+  bottom: 0; /* Positionner en bas */
+  left: 0; /* Positionner à gauche */
+  right: 0; /* Positionner à droite */
+  z-index: 1000; /* Assurer qu'il soit au-dessus des autres éléments */
+}

@@ -1,0 +1,38 @@
+<div class="container-fluid eco-products py-5">
+  <div class="container py-5">
+    <div class="tab-class text-center">
+      <div class="row g-4">
+      </div>
+
+      <div class="tab-content">
+        <div class="row g-4">
+          <div class="col-lg-12">
+            <div class="row g-4">
+              <!-- Use the products from the service -->
+              <div *ngFor="let produit of produitService.products" class="col-md-6 col-lg-4 col-xl-3">
+                <div class="rounded position-relative eco-item">
+                  <div class="eco-img">
+                    <img [src]="'assets/img/'+produit.image" class="img-fluid w-100 rounded-top" alt="{{ produit.nom }}">
+                  </div>
+                  <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">{{ produit.nom }}</div>
+                  <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                    <h4 class="text-secondary">{{ produit.nom }}</h4>
+                    <p>{{ produit.description }}</p>
+                    <div class="d-flex justify-content-between flex-column align-items-center">
+                      <p class="text-dark fs-5 fw-bold mb-3">{{ produit.prix }} € / unité</p>
+                      <a (click)="ajouterAuPanier(produit)" class="btn border border-secondary rounded-pill px-3 text-primary ajouter-panier-btn">
+                        <i class="fa fa-shopping-bag me-2 text-primary"></i> Ajouter au panier
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End of *ngFor loop -->
+            </div>
+          </div>
+        </div>
+        <!-- End of product section -->
+      </div>
+    </div>
+  </div>
+</div>

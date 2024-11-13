@@ -1,0 +1,55 @@
+/* Conteneur des notifications */
+.notification-container {
+    position: fixed; 
+    z-index: 9999; /* S'assurer que les notifications sont au-dessus des autres éléments */
+    width: 300px; /* Largeur fixe pour les notifications */
+    margin-top: -60px;
+    position: fixed;
+    z-index: 999;
+    margin-left: 40%;
+}
+
+/* Notification de base */
+.notification {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    pointer-events: auto;
+    opacity: 0.9;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(0); /* Assure une entrée fluide */
+}
+
+/* Effet de survol */
+.notification:hover {
+    opacity: 1; /* Plus visible au survol */
+    transform: translateY(-3px); /* Légère montée au survol */
+}
+
+/* Styles pour les notifications de succès */
+.bg-success {
+    background-color: rgba(40, 167, 69, 0.1) !important; /* Vert léger */
+    border: 1px solid #28a745 !important; /* Bordure verte */
+    color: #28a745 !important; /* Texte vert */
+    font-style: normal; /* Ne pas utiliser italic ici */
+}
+
+/* Styles pour les notifications d'erreur */
+.bg-danger {
+    background-color: rgba(255, 200, 200, 0.3) !important; /* Fond plus clair */
+    border: 1px solid #dc3545 !important; /* Bordure rouge */
+    color: #dc3545 !important; /* Texte rouge */
+    font-style: normal; /* Ne pas utiliser italic ici */
+}
+
+
+
+/* Styles pour l'état 'waiting' */
+.bg-waiting {
+    background-color: rgba(7, 85, 255, 0.1); /* Jaune léger */
+    border: 1px solid #ffc107; /* Bordure jaune */
+    color: #ffc107; /* Texte jaune */
+    font-style: italic; /* Italique pour indiquer l'attente */
+}

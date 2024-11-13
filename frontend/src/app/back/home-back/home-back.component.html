@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="container">
+  <app-sidebar (select)="customRouter.setComponent($event)"></app-sidebar>
+  <div class="content"> <!-- Ajout d'un div pour le contenu -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <app-custom-router #customRouter></app-custom-router> <!-- Utilisation du composant de routage personnalisé -->
+  </div>
+</div>
+<br>
+<br><br>
+<br>
+<br>
+<app-footer></app-footer>

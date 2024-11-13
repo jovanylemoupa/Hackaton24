@@ -1,0 +1,19 @@
+<div class="content">
+  <ng-container *ngIf="currentComponent === 'produit'">
+      <app-afficher-produits></app-afficher-produits>
+  </ng-container>
+
+  <ng-container *ngIf="currentComponent === 'ajouter-produit'">
+      <app-ajouter-produit></app-ajouter-produit>
+  </ng-container>
+
+  <ng-container *ngIf="currentComponent === 'afficher-produits'">
+      <app-afficher-produits></app-afficher-produits>
+  </ng-container>
+
+  <ng-container *ngIf="currentComponent === 'modifier-produit'">
+      <app-modifier-produit></app-modifier-produit>
+  </ng-container>
+
+ 
+</div>

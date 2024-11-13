@@ -1,0 +1,133 @@
+.footer {
+    background: 
+        linear-gradient(to right, rgba(168, 230, 207, 0.6), rgba(220, 237, 193, 0.6)), /* Dégradé similaire au .hero-header */
+        url('../../../../assets/img/back.jpg') center center/cover no-repeat; /* Image de fond similaire */
+    color: rgba(255, 255, 255, 0.9); /* Texte blanc avec bonne lisibilité */
+    position: relative;
+    text-align: center;
+    height: auto;
+    border-radius: 10px 10px 0 0; /* Arrondir seulement en haut à gauche et à droite */
+    box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.3); /* Ombre interne prononcée */
+    backdrop-filter: blur(10px); /* Effet de flou pour rendre le fond moins distrayant */
+    z-index: 1;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Couche sombre pour améliorer la lisibilité */
+    border-radius: 10px 10px 0 0; /* Arrondir également en haut à gauche et à droite pour la pseudo-classe */
+    z-index: -1;
+}
+
+    .footer h2, .footer h4 {
+        font-size: 3.5rem;  /* Taille des titres pour les rendre plus visibles */
+        color: rgba(255, 255, 255, 0.9); /* Blanc presque opaque pour une bonne lisibilité */
+        margin-bottom: 15px;
+    }
+
+    .footer p, .footer ul {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.8); /* Texte blanc légèrement transparent pour lisibilité */
+        margin-bottom: 10px;
+    }
+
+    .footer ul {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    .footer ul li {
+        margin-bottom: 5px;
+    }
+
+    .footer a {
+        color: rgba(255, 255, 255, 0.9); /* Liens en blanc pour bonne visibilité */
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .footer a:hover {
+        color: rgba(255, 255, 255, 1); /* Lien devient totalement opaque au survol */
+    }
+
+    .subscribe-form {
+        position: relative;
+        width: 100%; /* Assurez-vous que le formulaire prend toute la largeur */
+    }
+    
+    .subscribe-form input[type="email"] {
+        padding: 10px 40px; /* Ajoutez du padding pour une meilleure apparence */
+        border-radius: 50px 0 0 50px; /* Coins arrondis à gauche */
+        border: 1px solid #ccc; /* Ajouter une bordure grise */
+    }
+    
+    .subscribe-form button {
+        position: absolute;
+        top: 50%; /* Centre verticalement */
+        right: 0; /* Aligne le bouton à droite */
+         padding: 10px 20px; /* Ajustez le padding pour un bouton plus compact */
+        border-radius: 0 50px 50px 0; /* Coins arrondis seulement à droite */
+        background-color: #0d6efd; /* Couleur du bouton */
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        height: 100%; /* Assurez-vous que le bouton a la même hauteur que l'input */
+    }
+    
+    .subscribe-form button:hover {
+        background-color: #0056b3; /* Changement de couleur au survol */
+    }
+    
+    /* Section Copyright */
+    .copyright {
+        background-color: rgba(0, 0, 0, 0.7); /* Darker background */
+        color: rgba(255, 255, 255, 0.8); /* Light text color */
+        font-size: 2rem;
+        position: relative;
+        padding: 10px; /* Optional: Adjust padding */
+        z-index: 2; /* Make sure it stays on top */
+    }
+
+    .copyright span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-icons {
+        display: flex;
+        align-items: center; /* Centre verticalement */
+        justify-content: flex-start; /* Aligne les icônes à gauche */
+        margin-left: -90%; /* Supprime tout espace à gauche */
+        padding-left: 0; /* Supprime tout espace à gauche */
+    }
+
+
+
+    .social-icons-container {
+        
+        display: flex;
+        justify-content: flex-start; /* Aligne les icônes à gauche */
+        width: 100%; /* Assure que le conteneur prend toute la largeur disponible */
+    right: 200px;
+    }
+
+    .social-icons a {
+        font-size: 3.2rem;
+        margin: 0 5px; /* Espace entre les icônes */
+        color: rgba(255, 255, 255, 0.9); /* Icônes sociales blanches */
+    }
+
+    .social-icons a:hover {
+        background-color: #e9ecef;
+        color: #007bff;
+    }
+
+

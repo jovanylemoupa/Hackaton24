@@ -1,0 +1,53 @@
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white footer pt-5 mt-5">
+    <div class="container py-4">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <h2 class="text-primary mb-3">E-commerce</h2>
+                <p class="text-secondary">Produits écologiques et frais, respectueux de l'environnement.</p>
+
+                <!-- Utilisation d'Angular formGroup -->
+                <form [formGroup]="subscribeForm" (ngSubmit)="onSubmit()" class="subscribe-form position-relative">
+                    <input formControlName="email" class="form-control border-0 w-100 py-3 px-4 rounded-pill" type="email" placeholder="Votre Email">
+                    <button type="submit" class="btn btn-primary py-2 px-4 rounded-pill text-white position-absolute top-0 end-0">Abonnez-vous</button>
+                </form>
+
+         
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <h4 class="text-light mb-3">Liens Rapides</h4>
+                <ul class="list-unstyled text-secondary">
+                    <li><a class="text-secondary" href="#">À propos de nous</a></li>
+                    <li><a class="text-secondary" href="#">Politique de confidentialité</a></li>
+                    <li><a class="text-secondary" href="#">Conditions générales</a></li>
+                    <li><a class="text-secondary" href="#">FAQs & Aide</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <h4 class="text-light mb-3">Contact</h4>
+                <p><i class="fas fa-map-marker-alt me-2"></i> Limoges, France</p>
+                <p><i class="fas fa-envelope me-2"></i> alaamazouz2.1gmail.com</p>
+                <p><i class="fas fa-phone me-2"></i> +33 687163400</p>
+                <div class="social-icons-container" style="display: flex; justify-content: flex-start;">
+                    <div class="social-icons">
+                        <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-secondary btn-md-square rounded-circle" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+<!-- Copyright Start -->
+<div class="container-fluid copyright bg-dark py-3">
+    <div class="container d-flex justify-content-between">
+        <span class="text-light">&copy; 2024 E-commerce, Tous droits réservés.</span>
+    </div>
+</div>
+<!-- Copyright End -->

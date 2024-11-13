@@ -1,0 +1,10 @@
+<li class="align-items-center">
+    <div class="cart-area" style="display: block;">
+        <a routerLink="/panierDetail">
+            <div class="total" style="display: block;">{{prixTotal | currency: 'EUR' }} € 
+                <span>  |  {{quantiteTotal}}</span>
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </div>
+        </a>
+    </div>
+</li>
